@@ -22,7 +22,6 @@ CREATE TABLE venta(
 
 CREATE TABLE pago(
     id_pago INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    id_venta INT,
     monto FLOAT(10),  
     tipo_pago VARCHAR(200),
     fecha DATE,
@@ -51,8 +50,7 @@ CREATE TABLE unidad(
 CREATE TABLE detalle_venta(
     id_detalle_venta INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_venta INT,
-    id_unidad INT,
-    cantidad INT 
+    id_unidad INT
 );
 
 -- CLAVES FORANEAS
@@ -60,13 +58,11 @@ CREATE TABLE detalle_venta(
 ALTER TABLE venta
     ADD CONSTRAINT fk_constraint_id_cliente  FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
     ADD CONSTRAINT fk_constraint_id_pago FOREIGN KEY (id_pago) REFERENCES pago(id_pago);
-
-ALTER TABLE pago
-    ADD CONSTRAINT fk_constraint_id_venta_pago FOREIGN KEY (id_venta) REFERENCES venta(id_venta);
-
+    
 ALTER TABLE detalle_venta
     ADD CONSTRAINT fk_constraint_id_venta_detalle FOREIGN KEY (id_venta) REFERENCES venta(id_venta),
     ADD CONSTRAINT fk_constraint_id_unidad FOREIGN KEY (id_unidad) REFERENCES unidad(id_unidad);
 
 ALTER TABLE unidad
     ADD CONSTRAINT fk_constraint_id_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto);
+
