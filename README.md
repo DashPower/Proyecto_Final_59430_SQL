@@ -42,7 +42,6 @@ Registra los pagos realizados en las ventas.
 | Campo         | Tipo           | Descripción                            |
 |---------------|----------------|----------------------------------------|
 | `id_pago`     | INT, PK, AI    | Identificador único del pago           |
-| `id_venta`    | INT, FK        | Referencia a la venta (`venta`)        |
 | `monto`       | FLOAT(10)      | Monto pagado                           |
 | `tipo_pago`   | VARCHAR(200)   | Tipo de pago (efectivo, tarjeta, etc.) |
 | `fecha`       | DATE           | Fecha del pago                         |
@@ -87,7 +86,8 @@ Almacena los detalles de cada producto vendido en una venta.
 | `id_detalle_venta`| INT, PK, AI    | Identificador único del detalle de venta      |
 | `id_venta`        | INT, FK        | Referencia a la venta (`venta`)               |
 | `id_unidad`       | INT, FK        | Referencia a la unidad de producto (`unidad`) |
-| `cantidad`        | INT            | Cantidad de unidades vendidas                 |
 
 ---
+
+Documentacion disponible en el siguiente enlace: [Documentacion_proyecto_final.pdf](https://github.com/user-attachments/files/18265046/Documentacion_proyecto_final.pdf)
 
