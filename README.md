@@ -4,7 +4,8 @@
 
 ## DER final de la base de datos dozDB
 
-![alt text](DER_FINAL.PNG)
+![DER FINAL](https://github.com/user-attachments/assets/40a3cf50-8276-4531-a8b6-bbabc5201267)
+
 
 # Documentación de Base de Datos: `dozDB`
 
